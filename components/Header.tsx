@@ -1,4 +1,3 @@
-import { MotionConfig } from "framer-motion";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import SocialMediaIcons from "./SocialMediaIcons";
