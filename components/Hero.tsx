@@ -3,6 +3,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
@@ -17,9 +18,7 @@ export default function Hero({}: Props) {
     delaySpeed: 2000,
   });
   return (
-    
-
-    <div className="h-screen relative flex flex-col items-center justify-center text-center overflow-hidden text-white z-0">
+    <div className="h-screen relative flex flex-col items-center justify-center text-center overflow-hidden text-white z-20">
       <BackgroundCircles />
       <Image
         src="/images/Me_Day-34-crop.png"
@@ -30,23 +29,29 @@ export default function Hero({}: Props) {
       />
       <div className="mt-6">
         <h2 className="text-sm uppercase text-gray-400 pb-2 tracking-[15px]">
-            Developpeur Front-end
+          Developpeur Front-end
         </h2>
-        <h1 className="text-5xl lg:text6xl font-semibold px-10">
+        <h1 className="text-5xl lg:text6xl font-semibold px-10 my-2">
           <span>{text}</span>
           <Cursor cursorColor="#ffa700" />
         </h1>
       </div>
-      {/* <div className=""> */}
-        <div className="z-10 flex flex-row justify-center">
-            <div className="heroBtn">About</div>
-            <div className="heroBtn">Experience</div>
-            <div className="heroBtn">Skills</div>
-            <div className="heroBtn">Contact</div>
-        </div>
+      <div className="z-10 flex flex-row justify-center mt-2">
+        <Link href="#about">
+          <div className="heroBtn">About</div>
+        </Link>
+        <Link href="#experience">
+          <div className="heroBtn">Experience</div>
+        </Link>
+        <Link href="#skills">
+          <div className="heroBtn">Skills</div>
+        </Link>
+        <Link href="#contact">
+          <div className="heroBtn">Contact</div>
+        </Link>
+      </div>
 
       {/* </div> */}
     </div>
-
   );
 }
