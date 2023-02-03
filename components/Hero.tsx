@@ -19,7 +19,9 @@ export default function Hero({}: Props) {
   });
   return (
     <div className="h-screen relative flex flex-col items-center justify-center text-center overflow-hidden text-white z-20">
+      <div className="flex flex-col items-center justify-center mt-[25vh]">
       <BackgroundCircles />
+
       <Image
         src="/images/Me_Day-34-crop.png"
         className="rounded-full h-fit w-fit -mt-14 mx-auto object-cover"
@@ -49,6 +51,7 @@ export default function Hero({}: Props) {
         <Link href="#contact">
           <div className="heroBtn">Contact</div>
         </Link>
+      </div>
       </div>
 
       {/* </div> */}
