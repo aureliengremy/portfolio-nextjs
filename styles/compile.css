@@ -568,7 +568,7 @@ video {
   color: rgb(156 163 175 / var(--tw-text-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-duration: 300ms;
 }
 
 .heroBtn:hover {
@@ -616,6 +616,14 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-\[25vh\] {
+  margin-top: 25vh;
+}
+
 .-mt-14 {
   margin-top: -3.5rem;
 }
@@ -628,14 +636,6 @@ video {
   margin-top: 0.5rem;
 }
 
-.-mb-20 {
-  margin-bottom: -5rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .flex {
   display: flex;
 }
@@ -646,6 +646,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-56 {
+  height: 14rem;
 }
 
 .h-\[200px\] {
@@ -673,8 +677,8 @@ video {
   height: fit-content;
 }
 
-.h-56 {
-  height: 14rem;
+.w-56 {
+  width: 14rem;
 }
 
 .w-\[200px\] {
@@ -694,8 +698,8 @@ video {
   width: fit-content;
 }
 
-.w-56 {
-  width: 14rem;
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-shrink-0 {
@@ -808,16 +812,6 @@ video {
      object-fit: cover;
 }
 
-.object-fill {
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -828,22 +822,21 @@ video {
   padding-right: 0px;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-2xl {
@@ -861,6 +854,16 @@ video {
   line-height: 1.5rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -869,12 +872,12 @@ video {
   text-transform: uppercase;
 }
 
-.tracking-\[15px\] {
-  letter-spacing: 15px;
-}
-
 .tracking-\[20px\] {
   letter-spacing: 20px;
+}
+
+.tracking-\[15px\] {
+  letter-spacing: 15px;
 }
 
 .text-white {
@@ -882,14 +885,14 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .transition {
