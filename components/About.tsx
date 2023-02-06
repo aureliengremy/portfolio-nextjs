@@ -9,12 +9,14 @@ const About = ({}: Props) => {
       initial={{opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
-      className="h-screen flex flex-col text-center px-10 justify-evenly mx-auto items-center"
+      className="h-screen flex flex-col text-center px-10 mx-auto items-center"
     >
-      <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl">
-        About
-      </h3>
-      <div className="flex flex-col md:text-left md:flex-row">
+      <div className="mb-6 mt-24">
+        <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl">
+          About
+        </h3>
+      </div>
+      <div className="flex flex-col md:text-left md:flex-row my-auto">
         <motion.img
           initial={{
             x: -200,
