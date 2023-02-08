@@ -5,6 +5,7 @@ import Skills from '@/components/Skills';
 import Head from 'next/head'
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
+import ContactMe from '@/components/ContactMe';
 // import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
 
@@ -43,7 +44,9 @@ export default function Home() {
           <Projects/>
         </section>
         {/* Contact Me */}
-
+        <section id="contact" className="snap-center">
+          <ContactMe/>
+        </section>
       </main>
     </div>
   )
