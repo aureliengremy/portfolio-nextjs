@@ -16,11 +16,11 @@ const Projects = ({}: Props) => {
         </h4> */}
       </div>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 my-auto scrollBarCustom">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 my-auto scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="w-full h-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 "
+            className="w-full h-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44"
           >
             <motion.img
               initial={{y: -300, opacity: 0 }}
@@ -48,7 +48,7 @@ const Projects = ({}: Props) => {
         ))}
       </div>
 
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/20 left-0 h-[500px] -skew-y-12"></div>
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
     </div>
   );
 };
