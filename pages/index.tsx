@@ -6,6 +6,8 @@ import Head from 'next/head'
 import Hero from '@/components/Hero';
 import Projects from '@/components/Projects';
 import ContactMe from '@/components/ContactMe';
+import Link from 'next/link';
+import { ChevronUpIcon } from "@heroicons/react/24/solid";
 // import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
 
@@ -47,6 +49,13 @@ export default function Home() {
         <section id="contact" className="snap-center">
           <ContactMe/>
         </section>
+        <Link href="#hero">
+          <footer className="sticky bottom-5 w-full cursor-pointer">
+            <div className="flex items-center justify-center">
+              <ChevronUpIcon className="h-10 w-10 text-slate-500 hover:text-slate-50"/>
+            </div>
+          </footer>
+        </Link>
       </main>
     </div>
   )
