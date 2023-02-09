@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 type Props = {
@@ -67,7 +68,7 @@ const SocialMediaIcons = ({iconHeight}: Props) => {
     <div className="flex justify-center md:justify-start gap-4">
       {Object.entries(socialLinks).map(([key, value]) => {
         return (
-          <a
+          <Link
             key={key}
             href={value}
             className="shadow-effect transition duration-500"
@@ -75,7 +76,7 @@ const SocialMediaIcons = ({iconHeight}: Props) => {
             rel="noopener noreferrer"
           >
             {socialIcon(key)}
-          </a>
+          </Link>
         );
       })}
     </div>
