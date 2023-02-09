@@ -29,7 +29,7 @@ export default function Hero({}: Props) {
         height={128}
         alt="Photo de moi"
       />
-      <div className="mt-6">
+      <div className="mt-6 w-screen">
         <h2 className="text-sm uppercase text-gray-400 pb-2 tracking-[15px]">
           Developpeur Front-end
         </h2>
