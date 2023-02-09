@@ -4,19 +4,18 @@ import { PhoneIcon, AtSymbolIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
-    name: string,
-    email: string,
-    subject: string,
-    message: string,
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 };
-  
+
 type Props = {};
 
 const ContactMe = (props: Props) => {
-
-    const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = formData => 
-  window.location.href = `mailto:gremy.aurelien@gmail.com?subject=${formData.subject}&body=This is : ${formData.name}. - ${formData.message} - contact him : ${formData.email}`;
+  const { register, handleSubmit } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (formData) => 
+    (window.location.href = `mailto:gremy.aurelien@gmail.com?subject=${formData.subject}&body=This is : ${formData.name}. - ${formData.message} - contact him : ${formData.email}`);
 
   return (
     <div className="h-screen flex flex-col relative overflow-hidden text-center max-w-full mx-auto items-center z-0">
@@ -43,30 +42,33 @@ const ContactMe = (props: Props) => {
             <p>gremy.aurelien@gmail.com</p>
           </div>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} action="" className="flex flex-col space-y-2 w-fit mx-auto">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col space-y-2 w-fit mx-auto"
+        >
           <div className="flex space-x-2">
             <input
-                {...register('name')}
+              {...register("name")}
               className="contactInput"
               placeholder="Your name"
               type="text"
             />
             <input
-            {...register('email')}
+              {...register("email")}
               className="contactInput"
               placeholder="Your email"
               type="email"
             />
           </div>
           <input
-          {...register('subject')}
+            {...register("subject")}
             className="contactInput"
             placeholder="Subject"
             type="text"
             name="subject"
           />
           <textarea
-          {...register('message')}
+            {...register("message")}
             className="contactInput"
             placeholder="Your message"
             name="message"
