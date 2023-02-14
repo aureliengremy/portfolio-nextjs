@@ -8,6 +8,7 @@ This project is a modern portfolio website built with NEXT.JS, Framer Motion, Ta
 - [Framer-motion](https://www.framer.com/motion/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Sanity](https://www.sanity.io/)
+- [Next-Sanity](https://github.com/sanity-io/next-sanity)
 
 
 ## Usage Instructions
