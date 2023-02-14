@@ -1,11 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+// import {fetchSkills} from '../utils/fetchSkills'
 
 type Props = {
   directionLeft: boolean;
 };
 
 const Skill = ({ directionLeft }: Props) => {
+  // fetchSkills()
   return (
     <div className="group relative flex cursor-pointer">
       <motion.div
