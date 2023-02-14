@@ -39,7 +39,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       </Head>
       <main className="container mx-auto">
         {/* Header */}
-        <Header />
+        <Header socials={socials} />
         {/* Hero */}
         <section id="hero" className="snap-start">
           <Hero />

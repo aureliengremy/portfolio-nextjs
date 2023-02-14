@@ -1,18 +1,22 @@
+import social from "@/sanity/schemas/social";
+import { Social } from "@/typings";
 import Link from "next/link";
 import React from "react";
 
 type Props = {
-  iconHeight: string
+  iconHeight: string,
+  socialDataTitle: string,
+  socialDataUrl: string,
 }
 
-const SocialMediaIcons = ({iconHeight}: Props) => {
-  const socialLinks = {
-    github: "https://github.com/aureliengremy",
-    linkedin: "https://www.linkedin.com/in/aureliengremy",
-    twitter: "https://twitter.com/AurelGy",
-    codepen: "https://codepen.io/OrL",
-    dev: "https://dev.to/iamorl",
-  };
+const SocialMediaIcons = ({iconHeight, socialDataTitle, socialDataUrl}: Props) => {
+  // const socialLinks = {
+  //   github: "https://github.com/aureliengremy",
+  //   linkedin: "https://www.linkedin.com/in/aureliengremy",
+  //   twitter: "https://twitter.com/AurelGy",
+  //   codepen: "https://codepen.io/OrL",
+  //   dev: "https://dev.to/iamorl",
+  // };
 
   const socialIcon = (rs: string) => {
     switch (rs) {
@@ -65,21 +69,20 @@ const SocialMediaIcons = ({iconHeight}: Props) => {
   };
 
   return (
-    <div className="flex justify-center md:justify-start gap-4">
-      {Object.entries(socialLinks).map(([key, value]) => {
-        return (
+    <>
+      {/* {Object.entries(socialLinks).map(([key, value]) => { */}
+        {/* return ( */}
           <Link
-            key={key}
-            href={value}
+            href={socialDataUrl}
             className="shadow-effect transition duration-500"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            {socialIcon(key)}
+            >
+            {socialIcon(socialDataTitle)}
           </Link>
-        );
-      })}
-    </div>
+        {/* ); */}
+      {/* })} */}
+    </>
   );
 };
 
