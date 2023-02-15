@@ -11,7 +11,7 @@ import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import { GetStaticProps } from "next";
 import { Experience, PageInfo, Project, Skill, Social } from "@/typings";
 import { fetchSkills } from "@/utils/fetchSkills";
-import { fetchExperiences } from "@/utils/fetchExpericence";
+import { fetchExperiences } from "@/utils/fetchExpericences";
 import { fetchPageInfo } from "@/utils/fetchPageInfo";
 import { fetchProjects } from "@/utils/fetchProjects";
 import { fetchSocials } from "@/utils/fetchSocials";
@@ -42,7 +42,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <Header socials={socials} />
         {/* Hero */}
         <section id="hero" className="snap-start">
-          <Hero />
+          <Hero pageInfo={pageInfo} />
         </section>
         {/* About */}
         <section id="about" className="snap-center">
@@ -75,7 +75,6 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
     </div>
   );
 };
-
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {

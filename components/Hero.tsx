@@ -4,13 +4,17 @@ import BackgroundCircles from "./BackgroundCircles";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { PageInfo } from "@/typings";
+import { urlFor } from "@/sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo
+};
 
-export default function Hero({}: Props) {
+export default function Hero({pageInfo}: Props) {
   const [text, count] = useTypewriter({
     words: [
-      "Hi, my name is Aurelien!",
+      `Hi, my name is ${pageInfo.name}!`,
       "Developper Front-end",
       "Developper FullStack",
     ],
@@ -23,12 +27,13 @@ export default function Hero({}: Props) {
       <BackgroundCircles />
 
       <Image
-        src="/images/Me_Day-34-crop.png"
+        src={urlFor(pageInfo?.heroImage).url()}
         className="rounded-full h-fit w-fit -mt-14 mx-auto object-cover"
         width={128}
         height={128}
         alt="Photo de moi"
       />
+
       <div className="mt-6 w-screen">
         <h2 className="text-sm uppercase text-gray-400 pb-2 tracking-[15px]">
           Developpeur Front-end
