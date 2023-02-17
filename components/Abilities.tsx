@@ -1,11 +1,14 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import Skill from './Skill';
+import Ability from './Ability';
+import { Skill } from '@/typings';
 
 
-type Props = {}
+type Props = {
+  skills: Skill[]
+}
 
-const Skills = ({}: Props) => {
+const Abilities = ({}: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,16 +26,16 @@ const Skills = ({}: Props) => {
       </div>
       <div className="grid grid-cols-4 gap-5 my-auto">
         {/* {Skill} */}
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
-        <Skill/>
+        <Ability/>
+        <Ability/>
+        <Ability/>
+        <Ability/>
+        <Ability/>
+        <Ability/>
+        <Ability/>
+        <Ability/>
       </div>
     </motion.div>
   )
 }
-export default Skills;
+export default Abilities;

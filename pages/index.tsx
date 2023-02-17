@@ -1,7 +1,7 @@
 import About from "@/components/About";
 import WorkExperience from "@/components/WorkExperience";
 import Header from "@/components/Header";
-import Skills from "@/components/Skills";
+import Abilities from "@/components/Abilities";
 import Head from "next/head";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -50,11 +50,11 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         </section>
         {/* Experience */}
         <section id="experience" className="snap-center">
-          <WorkExperience />
+          <WorkExperience experiences={experiences}/>
         </section>
         {/* Skills */}
         <section id="skills" className="snap-center">
-          <Skills />
+          <Abilities skills={skills} />
         </section>
         {/* Projects */}
         <section id="projects" className="snap-center">
