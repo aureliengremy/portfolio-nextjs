@@ -37,7 +37,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container mx-auto">
+      <main className="mx-auto">
         {/* Header */}
         <Header socials={socials} />
         {/* Hero */}
@@ -46,7 +46,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         </section>
         {/* About */}
         <section id="about" className="snap-center">
-          <About />
+          <About pageInfo={pageInfo}/>
         </section>
         {/* Experience */}
         <section id="experience" className="snap-center">
