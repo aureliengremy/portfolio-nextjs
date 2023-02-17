@@ -6,7 +6,7 @@ type Props = {
   directionLeft: boolean;
 };
 
-const Skill = ({ directionLeft }: Props) => {
+const Ability = ({ directionLeft }: Props) => {
   // fetchSkills()
   return (
     <div className="group relative flex cursor-pointer">
@@ -49,4 +49,4 @@ const Skill = ({ directionLeft }: Props) => {
     </div>
   );
 };
-export default Skill;
+export default Ability;

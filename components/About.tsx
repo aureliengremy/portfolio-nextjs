@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "@/typings";
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-const About = ({}: Props) => {
+const About = ({pageInfo}: Props) => {
   return (
     <motion.div
       initial={{opacity: 0 }}
@@ -16,7 +19,7 @@ const About = ({}: Props) => {
           About
         </h3>
       </div>
-      <div className="flex flex-col md:text-left md:flex-row my-auto">
+      <div className="container mx-auto flex flex-col md:text-left md:flex-row my-auto">
         <motion.img
           initial={{
             x: -200,

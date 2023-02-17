@@ -20,7 +20,7 @@ const WorkExperience = ({experiences}: Props) => {
           Experience
         </h3>
       </div>
-      <div className="my-auto w-full flex space-x-5 overflow-x-scroll p-4 snap-x snap-mandatory">
+      <div className="my-auto w-full flex space-x-5 overflow-x-scroll p-4 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin">
         {/* {Experience} */}
         <ExperienceCard />
         <ExperienceCard />

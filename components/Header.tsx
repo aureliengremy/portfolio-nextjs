@@ -12,7 +12,7 @@ type Props = {
 
 export default function Header({ socials }: Props) {
   return (
-    <header className="sticky top-0 flex items-center justify-between z-30 h-16">
+    <header className="container mx-auto sticky top-0 flex items-center justify-between z-30 h-16">
       <motion.div
         initial={{
           x: -500,
@@ -27,7 +27,7 @@ export default function Header({ socials }: Props) {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center justify-center px-3"
+        className="flex flex-row items-center justify-center px-3 ml-2 sm:ml-0"
       >
         <div className="flex justify-center md:justify-start gap-4">
         {/* social icons */}
@@ -57,7 +57,7 @@ export default function Header({ socials }: Props) {
         transition={{
           duration: 1,
         }}
-        className="flex flex-row items-center px-3"
+        className="flex flex-row items-center px-3 mr-2 sm:mr-0"
       >
         <EnvelopeIcon className="cursor-pointer h-6 mr-2" />
         <p className="uppercase hidden md:inline-flex text-sm text-white">

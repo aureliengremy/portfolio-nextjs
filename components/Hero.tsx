@@ -43,7 +43,7 @@ export default function Hero({pageInfo}: Props) {
           <Cursor cursorColor="#ffa700" />
         </h1>
       </div>
-      <div className="z-10 flex flex-row justify-center mt-2">
+      <div className="z-10 flex flex-col md:flex-row justify-center mt-2">
         <Link href="#about">
           <div className="heroBtn">About</div>
         </Link>
