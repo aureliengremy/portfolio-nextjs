@@ -1,10 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Project } from "@/typings";
 
-type Props = {};
+type Props = {
+  projects: Project[]
+};
 
-const Projects = ({}: Props) => {
-  const projects = [1, 2, 3, 4, 5];
+const Projects = ({projects}: Props) => {
+  const projectsTest = [1, 2, 3, 4, 5];
   return (
     <div className="h-screen flex flex-col relative overflow-hidden text-center max-w-full mx-auto items-center z-0">
       <div className="mb-6 mt-24">
@@ -17,7 +20,7 @@ const Projects = ({}: Props) => {
       </div>
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 my-auto scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin">
-        {projects.map((project, index) => (
+        {projectsTest.map((project, index) => (
           <div
             key={index}
             className="w-full h-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44"
