@@ -15,8 +15,8 @@ export default function Hero({pageInfo}: Props) {
   const [text, count] = useTypewriter({
     words: [
       `Hi, my name is ${pageInfo.name}!`,
-      "Developper Front-end",
-      "Developper FullStack",
+      "Developpeur Front-end",
+      "Developpeur FullStack",
     ],
     loop: true,
     delaySpeed: 2000,

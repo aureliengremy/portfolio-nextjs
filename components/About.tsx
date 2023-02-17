@@ -16,7 +16,7 @@ const About = ({pageInfo}: Props) => {
     >
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl">
-          About
+          À propos
         </h3>
       </div>
       <div className="container mx-auto flex flex-col md:text-left md:flex-row my-auto">
@@ -37,13 +37,10 @@ const About = ({pageInfo}: Props) => {
         />
         <motion.div className="space-y-10 px-0 md:px-10 xl:m-auto">
           <h4 className="text-semibold text-4xl">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            {pageInfo.backgroundInformationTitle}
           </h4>
           <p className="text-base">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
-            debitis aspernatur culpa! Eius nihil, accusantium eligendi tenetur
-            doloribus magni! Nobis illo tenetur alias esse, assumenda at
-            accusamus voluptas. Dignissimos, quae.
+          {pageInfo.backgroundInformation}
           </p>
         </motion.div>
       </div>
