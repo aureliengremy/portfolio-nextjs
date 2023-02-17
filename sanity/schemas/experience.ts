@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     },
     {
+      name: 'jobLink',
+      title: 'JobLink',
+      type: 'string',
+    },
+    {
       name: 'companyImage',
       title: 'CompanyImage',
       type: 'image',
