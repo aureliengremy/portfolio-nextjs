@@ -7,7 +7,9 @@ import  { Experience } from '../../typings';
 const query = groq`
 *[_type == "experience"] {
   ...,
-  technologies[]->
+  technologies[]-> {
+    "image": image.asset->url
+ }
 }
 `
 
