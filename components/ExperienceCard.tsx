@@ -21,7 +21,7 @@ const ExperienceCard = ({ experience }: Props) => {
         viewport={{ once: true }}
         className="h-32 xl:h-[150px] object-cover object-center"
         src={urlFor(experience?.companyImage).url()}
-        alt="company logo"
+        alt={experience?.jobTitle + " job"}
       />
 
       <div className="px-0 md:px-10">
