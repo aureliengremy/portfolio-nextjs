@@ -7,7 +7,10 @@ import  { Project } from '../../typings';
 const query = groq`
 *[_type == "project"] {
   ...,
-  technologies[]->
+  "image": image.asset->url,
+  technologies[]-> {
+    "image": image.asset->url
+ }
 }
 `
 
