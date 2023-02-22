@@ -1,85 +1,87 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PhoneIcon, AtSymbolIcon } from "@heroicons/react/24/solid";
-import { useForm, SubmitHandler } from "react-hook-form";
+// import { useForm, SubmitHandler } from "react-hook-form";
+import { PageInfo } from "@/typings";
+import { urlFor } from "@/sanity";
 
-type Inputs = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
+type Props = {
+  pageInfo: PageInfo
 };
 
-type Props = {};
-
-const ContactMe = (props: Props) => {
-  const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (formData) => 
-    (window.location.href = `mailto:gremy.aurelien@gmail.com?subject=${formData.subject}&body=This is : ${formData.name}. - ${formData.message} - contact him : ${formData.email}`);
-
+const ContactMe = ({pageInfo}: Props) => {
   return (
     <div className="h-screen flex flex-col relative overflow-hidden text-center max-w-full mx-auto items-center z-0">
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl mb-5">
-          Contact me
+          Contactez moi
         </h3>
-        {/* <h4 className="uppercase tracking-[3px] text-gray-500 text-sm">
-        Hover over a skill for currency profieciency.
-      </h4> */}
       </div>
-
-      <div className="flex flex-col space-y-10 my-auto">
-        <h4 className="text-4xl font-semibold text-center">
-          <span className="underline decoration-[#F7AB0A]/50">Case Study</span>{" "}
-          I&apos;m the
-        </h4>
-        <div className="">
-          {/* <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon />
-          </div> */}
+      <div className="container mx-auto flex flex-col md:text-left lg:flex-row items-center my-auto">
+        <motion.img
+          initial={{
+            x: -200,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1.2,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          src={urlFor(pageInfo?.contactPic).url()}
+          alt="photo de Aurelien Gremy"
+          className="hidden md:flex mb-5 lg:m-auto flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-fit md:h-64 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[400px]"
+        />
+        <motion.div className="space-y-10 px-0 lg:px-10 xl:m-auto">
           <div className="flex items-center space-x-5 justify-center">
-            <AtSymbolIcon />
-            <p>gremy.aurelien@gmail.com</p>
+            <AtSymbolIcon width={122} height={122} />
+            {/* <p>gremy.aurelien@gmail.com</p> */}
           </div>
-        </div>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
-        >
-          <div className="flex space-x-2">
-            <input
-              {...register("name")}
-              className="contactInput"
-              placeholder="Your name"
-              type="text"
-            />
-            <input
-              {...register("email")}
-              className="contactInput"
-              placeholder="Your email"
-              type="email"
-            />
-          </div>
-          <input
-            {...register("subject")}
-            className="contactInput"
-            placeholder="Subject"
-            type="text"
-            name="subject"
-          />
-          <textarea
-            {...register("message")}
-            className="contactInput"
-            placeholder="Your message"
-            name="message"
-          />
-          <button
-            className="bg-[#F7AB0A] py-3 px-5 rounded-md text-black font-bold text-lg"
-            type="submit"
+
+          <form
+            className="flex flex-col space-y-2 w-fit mx-auto"
+            action="https://formsubmit.co/gremy.aurelien@gmail.com"
+            // onSubmit={onSubmit}
+            method="POST"
           >
-            Submit
-          </button>
-        </form>
+            <input
+              type="hidden"
+              name="_token"
+              value="gh29HGwAUw3W25ewpNGObPgu2xoNsmcxt2NZaDkx"
+            />
+            <div className="flex space-x-2">
+              <input
+                className="contactInput"
+                placeholder="Votre nom"
+                type="text"
+              />
+              <input
+                className="contactInput"
+                placeholder="Votre email"
+                type="email"
+              />
+            </div>
+            <input
+              className="contactInput"
+              placeholder="Sujet"
+              type="text"
+              name="subject"
+            />
+            <textarea
+              className="contactInput"
+              placeholder="Votre message"
+              name="message"
+            />
+            <button
+              className="bg-[#F7AB0A] py-3 px-5 rounded-md text-black font-bold text-lg"
+              type="submit"
+            >
+              Envoyer
+            </button>
+          </form>
+        </motion.div>
       </div>
     </div>
   );
