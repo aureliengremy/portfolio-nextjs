@@ -5,7 +5,10 @@ import { sanityClient } from '../../sanity';
 import  { Skill } from '../../typings';
 
 const query = groq`
-  *[_type == "social"]
+  *[_type == "skill"] {
+    ...,
+      "image": image.asset->url 
+  }
 `
 
 type Data = {
