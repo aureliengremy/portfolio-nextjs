@@ -8,7 +8,8 @@ type Props = {
   skills: Skill[]
 }
 
-const Abilities = ({}: Props) => {
+const Abilities = ({skills}: Props) => {
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,22 +19,20 @@ const Abilities = ({}: Props) => {
     >
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl mb-5">
-          Skills
+          Compétences
         </h3>
         {/* <h4 className="uppercase tracking-[3px] text-gray-500 text-sm">
           Hover over a skill for currency profieciency.
         </h4> */}
       </div>
-      <div className="grid grid-cols-4 gap-5 my-auto">
+      <div className="grid grid-cols-4 gap-12 my-auto">
         {/* {Skill} */}
-        <Ability directionLeft={true}/>
-        <Ability directionLeft={true}/>
-        <Ability directionLeft={true}/>
-        <Ability directionLeft={true}/>
-        <Ability directionLeft={false}/>
-        <Ability directionLeft={false}/>
-        <Ability directionLeft={false}/>
-        <Ability directionLeft={false}/>
+        {skills?.slice(0, skills.length / 2).map((skill,index) => (
+          <Ability key={skill._id} skill={skill} directionLeft={true}/>          
+        ))}
+        {skills?.slice(skills.length /2, skills.length).map((skill,index) => (
+          <Ability key={skill._id} skill={skill} directionLeft={false}/>          
+        ))}
       </div>
     </motion.div>
   )
