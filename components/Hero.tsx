@@ -45,13 +45,16 @@ export default function Hero({pageInfo}: Props) {
       </div>
       <div className="z-10 flex flex-col md:flex-row justify-center mt-2">
         <Link href="#about">
-          <div className="heroBtn">About</div>
+          <div className="heroBtn">À propos</div>
         </Link>
         <Link href="#experience">
-          <div className="heroBtn">Experience</div>
+          <div className="heroBtn">Experiences</div>
         </Link>
         <Link href="#skills">
-          <div className="heroBtn">Skills</div>
+          <div className="heroBtn">Compétences</div>
+        </Link>
+        <Link href="#projects">
+          <div className="heroBtn">Projets</div>
         </Link>
         <Link href="#contact">
           <div className="heroBtn">Contact</div>
