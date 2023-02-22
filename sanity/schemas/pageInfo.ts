@@ -42,6 +42,14 @@ export default defineType({
       }
     },
     {
+      name: 'contactPic',
+      title: 'ContactPic',
+      type: 'image',
+      options: {
+        hotspot: true,
+      }
+    },
+    {
       name: 'email',
       title: 'Email',
       type: 'string',
