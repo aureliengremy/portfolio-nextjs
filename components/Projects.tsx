@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Project } from "@/typings";
-import { urlFor } from "@/sanity";
+import { urlFor } from "../sanity/sanity";
 import Link from "next/link";
 import Image from "next/image";
 import { LinkIcon  } from "@heroicons/react/24/solid";

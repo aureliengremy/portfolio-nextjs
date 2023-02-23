@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { PhoneIcon, AtSymbolIcon } from "@heroicons/react/24/solid";
 // import { useForm, SubmitHandler } from "react-hook-form";
-import { urlFor } from "@/sanity";
+import { urlFor } from "../sanity/sanity";
 import { PageInfo } from "@/typings";
 
 type Props = {
