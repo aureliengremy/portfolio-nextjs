@@ -22,13 +22,13 @@ const Projects = ({ projects }: Props) => {
         </h4> */}
       </div>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 my-auto scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin">
+      <div className="relative w-full h-screen md:h-auto flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 my-auto scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin">
         {projects.map((project, index) => {
           const withLink = project?.linkToBuild;
           return (
             <div
               key={project._id}
-              className="w-full h-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-16 md:p-32"
+              className="w-full h-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-6 sm:p-16 md:p-32"
             >
               <div className="relative group">
                 <motion.img
@@ -38,7 +38,7 @@ const Projects = ({ projects }: Props) => {
                   viewport={{ once: true }}
                   src={urlFor(project?.image).url()}
                   alt={project?.title + " screenshot"}
-                  className="group-hover:blur-sm h-80 lg:h-[450px] xl:h-[600px] object-cover"
+                  className="group-hover:blur-sm w-full h-48 md:h-80 lg:h-[450px] xl:h-[600px] object-cover"
                 />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full lg:w-2/3">
                   <div className="space-y-10 p-3 md:p-10 md:py-5 max-w-6xl rounded-lg backdrop-blur-md bg-[#1a1933]/40 transition-all transform translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 z-10 group-hover:ease-in-out group-hover:duration-500 border border-[#ffa700]">
