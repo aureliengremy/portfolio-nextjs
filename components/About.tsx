@@ -12,14 +12,14 @@ const About = ({ pageInfo }: Props) => {
       initial={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
-      className="h-screen flex flex-col text-center px-10 mx-auto items-center"
+      className="container h-screen flex flex-col text-center px-10 mx-auto items-center"
     >
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl">
           À propos
         </h3>
       </div>
-      <div className="container mx-auto flex flex-col md:text-left md:flex-row my-auto">
+      <div className="mx-auto flex flex-col md:text-left md:flex-row my-auto">
         <motion.img
           initial={{
             x: -200,
