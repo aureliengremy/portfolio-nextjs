@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Skill } from "@/typings";
 import Image from "next/image";
-import { urlFor } from "../sanity/sanity";
+import { urlFor } from "../sanity";
 // import {fetchSkills} from '../utils/fetchSkills'
 
 type Props = {
