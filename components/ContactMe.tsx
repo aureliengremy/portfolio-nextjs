@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { PhoneIcon, AtSymbolIcon } from "@heroicons/react/24/solid";
 // import { useForm, SubmitHandler } from "react-hook-form";
-import { PageInfo } from "@/typings";
 import { urlFor } from "@/sanity";
+import { PageInfo } from "@/typings";
 
 type Props = {
   pageInfo: PageInfo

@@ -21,6 +21,7 @@ export interface PageInfo extends SanityBody {
     backgroundInformationTitle: string;
     backgroundInformation: text;
     profilePic: Image;
+    contactPic: Image;
     role: string;
 }
 export interface Experience extends SanityBody {
