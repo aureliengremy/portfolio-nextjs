@@ -1,4 +1,3 @@
-import social from "@/sanity/schemas/social";
 import { Social } from "@/typings";
 import Link from "next/link";
 import React from "react";
