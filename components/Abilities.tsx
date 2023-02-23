@@ -38,7 +38,7 @@ const Abilities = ({skills}: Props) => {
       initial={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
-      className="min-h-screen flex flex-col justify-evenly relative md:text-left xl:flex-row max-w-[2000px] xl:px-10 xl:space-y-0 mx-auto items-center"
+      className="container min-h-screen flex flex-col justify-evenly relative md:text-left xl:flex-row xl:px-10 xl:space-y-0 mx-auto items-center"
     >
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl mb-5">
@@ -48,7 +48,7 @@ const Abilities = ({skills}: Props) => {
           Hover over a skill for currency profieciency.
         </h4> */}
       </div>
-      <div className="grid grid-cols-4 gap-12 my-auto">
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-x-3 gap-y-1 md:gap-12 m-auto">
         {/* {Skill} */}
         {/* {skills?.slice(0, skills.length / 2).map((skill,index) => (
           <Ability key={skill._id} skill={skill} directionLeft={true}/>          
