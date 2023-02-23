@@ -14,9 +14,9 @@ export default function BackgroundCircles({}: Props) {
       transition={{ duration: 2.5}}
       className="relative flex justify-center items-center"
     >
-      <div className="absolute border border-orange-300 rounded-full h-[200px] w-[200px] animate-ping"></div>
+      <div className="absolute border border-orange-300 rounded-full h-[200px] w-[200px] lg:h-[300px] lg:w-[300px] animate-ping"></div>
       {/* <div className="absolute border border-orange-300 rounded-full h-[300px] w-[300px]"></div> */}
-      <div className="absolute border border-orange-300 rounded-full h-[600px] w-[600px] animate-pulse"></div>
+      <div className="absolute border border-orange-300 rounded-full h-[520px] w-[520px] md:h-[600px] md:w-[600px] lg:h-[800px] lg:w-[800px] animate-pulse"></div>
     </motion.div>
   );
 }

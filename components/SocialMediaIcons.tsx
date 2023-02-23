@@ -73,7 +73,7 @@ const SocialMediaIcons = ({iconHeight, socialDataTitle, socialDataUrl}: Props) =
         {/* return ( */}
           <Link
             href={socialDataUrl}
-            className="shadow-effect transition duration-500"
+            className="shadow-effect transition duration-500 bg-deep-blue"
             target="_blank"
             rel="noopener noreferrer"
             >
