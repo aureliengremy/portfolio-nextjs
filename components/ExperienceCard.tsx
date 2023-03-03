@@ -10,7 +10,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-4 md:space-y-7 flex-shrink-0 w-[350px] md:w-[600px] xl:w-[900px] snap-center bg-[#1a1933] p-12 hover:opacity-100 opacity-100 md:opacity-40 cursor-pointer transition-opacity duration-200 overflow-scroll md:overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-4 md:space-y-7 flex-shrink-0 w-[350px] md:w-[600px] xl:w-[900px] snap-center bg-[#1a1933] p-12 hover:opacity-100 opacity-100 md:opacity-40 cursor-pointer transition-opacity duration-200 overflow-scroll md:overflow-hidden ">
       <motion.img
         initial={{
           y: -100,
