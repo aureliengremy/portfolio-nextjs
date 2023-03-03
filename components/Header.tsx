@@ -61,7 +61,7 @@ export default function Header({ socials }: Props) {
       >
         <EnvelopeIcon className="cursor-pointer h-6 mr-2" />
         <p className="uppercase hidden md:inline-flex text-sm text-white">
-          Get in touch
+          Me contacter
         </p>
       </motion.a>
     </header>
