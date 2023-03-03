@@ -46,6 +46,7 @@ const Projects = ({ projects }: Props) => {
                       <Link
                         href={project?.linkToBuild}
                         className="text-4xl font-semibold text-center"
+                        target="_blank"
                       >
                         <div className="flex justify-center items-center">
                           <span className="underline decoration-[#F7AB0A]/50 mr-2">
