@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }: Props) => {
         alt={experience?.jobTitle + " job"}
       />
 
-      <div className="px-0 md:px-10">
+      <div className="px-0 md:px-10 overflow-y-auto">
         <h4 className="text-xl md:text-4xl font-light">{experience?.jobTitle}</h4>
         <p className="font-bold text-lg md:text-2xl mt-1">{experience?.company}</p>
         <div className="flex flex-wrap space-x-2 my-3">
