@@ -9,7 +9,6 @@ type Props = {
 
 const WorkExperience = ({ experiences }: Props) => {
   const orderedExp = experiences.sort((a: any,b: any) => new Date(b.dateStarted).valueOf() - new Date(a.dateStarted).valueOf())
-  console.log(orderedExp)
   return (
     <motion.div
       initial={{ opacity: 0 }}
