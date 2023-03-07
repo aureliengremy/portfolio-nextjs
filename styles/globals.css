@@ -11,4 +11,16 @@
     .contactInput {
         @apply outline-none bg-slate-400/10 rounded-sm border-b px-3 py-2 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
     }
+    .facecoin {
+        animation: spin 4s cubic-bezier(.3,2,.4,.8);
+        transform-style: preserve-3d;      
+    }
+}
+@keyframes spin {
+    0%, 10% {
+        transform: rotate(0deg) perspective(400px);
+    }
+    90%, 100% {
+        transform: rotate(0deg) perspective(400px) rotateY(360deg);
+    }
 }
