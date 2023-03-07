@@ -26,15 +26,17 @@ export default function Hero({pageInfo}: Props) {
       <div className="flex flex-col items-center justify-center mt-[25vh]">
       <BackgroundCircles />
 
-      <div className="facecoin">
-        <Image
-          src={urlFor(pageInfo?.heroImage).url()}
-          className="rounded-full h-fit w-fit -mt-14 mx-auto object-cover"
-          width={128}
-          height={128}
-          alt="Photo de moi"
-        />
-      </div>
+      <Link href="#about">
+        <div className="facecoin">
+          <Image
+            src={urlFor(pageInfo?.heroImage).url()}
+            className="rounded-full h-fit w-fit -mt-14 mx-auto object-cover"
+            width={128}
+            height={128}
+            alt="Photo de moi"
+          />
+        </div>
+      </Link>
 
       <div className="mt-6 w-screen">
         <h2 className="text-sm uppercase text-gray-400 pb-2 tracking-[15px]">
