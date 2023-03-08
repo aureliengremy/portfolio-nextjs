@@ -15,6 +15,8 @@ import { fetchExperiences } from "@/utils/fetchExpericences";
 import { fetchPageInfo } from "@/utils/fetchPageInfo";
 import { fetchProjects } from "@/utils/fetchProjects";
 import { fetchSocials } from "@/utils/fetchSocials";
+import { useEffect } from "react";
+import MouseBlob from "@/components/MouseBlob";
 // import { Inter } from '@next/font/google'
 // import styles from '@/styles/Home.module.css'
 
@@ -29,6 +31,8 @@ type Props = {
 };
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
+
+
   return (
     <div className="bg-deep-blue text-white h-screen overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
@@ -37,6 +41,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <MouseBlob/>
       <main className="mx-auto">
         {/* Header */}
         <Header socials={socials} />
@@ -46,11 +51,11 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         </section>
         {/* About */}
         <section id="about" className="snap-center">
-          <About pageInfo={pageInfo}/>
+          <About pageInfo={pageInfo} />
         </section>
         {/* Experience */}
         <section id="experience" className="snap-center">
-          <WorkExperience experiences={experiences}/>
+          <WorkExperience experiences={experiences} />
         </section>
         {/* Skills */}
         <section id="skills" className="snap-center">
@@ -95,7 +100,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 seconds
-    // if you use: 
+    // if you use:
     // revalidate: 10,
   };
 };

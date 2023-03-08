@@ -625,8 +625,27 @@ video {
 }
 
 .facecoin {
-  animation: spin 4s cubic-bezier(.3,2,.4,.8);
+  animation: spin 4s cubic-bezier(0.3, 2, 0.4, 0.8);
   transform-style: preserve-3d;
+}
+
+.mouseblob {
+  animation: rotatebg 20s infinite;
+  background: linear-gradient(
+      to right,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    );
+  height: 250px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  filter: blur(200px);
+  opacity: 0.8;
 }
 
 .absolute {
@@ -813,10 +832,6 @@ video {
 
 .h-6 {
   height: 1.5rem;
-}
-
-.h-\[100px\] {
-  height: 100px;
 }
 
 .h-fit {
@@ -1482,12 +1497,28 @@ video {
 }
 
 @keyframes spin {
-  0%, 10% {
+  0%,
+  10% {
     transform: rotate(0deg) perspective(400px);
   }
 
-  90%, 100% {
+  90%,
+  100% {
     transform: rotate(0deg) perspective(400px) rotateY(360deg);
+  }
+}
+
+@keyframes rotatebg {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
   }
 }
 
@@ -1532,6 +1563,25 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:mouseblob {
+    animation: rotatebg 20s infinite;
+    background: linear-gradient(
+      to right,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    );
+    height: 250px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    filter: blur(200px);
+    opacity: 0.8;
+  }
+
   .sm\:ml-0 {
     margin-left: 0px;
   }
