@@ -11,7 +11,7 @@ type Props = {
 
 const ContactMe = ({pageInfo}: Props) => {
   return (
-    <div className="h-screen flex flex-col relative overflow-hidden text-center max-w-full mx-auto items-center z-0">
+    <div className="h-screen flex flex-col relative overflow-hidden text-center max-w-full mx-auto items-center z-0 md:pt-12 2xl:pt-3">
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl mb-5">
           Me contacter

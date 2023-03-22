@@ -38,7 +38,7 @@ const Abilities = ({skills}: Props) => {
       initial={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
-      className="container min-h-screen flex flex-col justify-evenly relative md:text-left xl:flex-row xl:px-10 xl:space-y-0 mx-auto items-center"
+      className="container min-h-screen flex flex-col justify-evenly relative md:text-left xl:flex-row xl:px-10 xl:space-y-0 mx-auto items-center md:pt-24 2xl:pt-3"
     >
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl mb-5">

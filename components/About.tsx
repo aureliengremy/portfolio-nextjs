@@ -12,7 +12,7 @@ const About = ({ pageInfo }: Props) => {
       initial={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
-      className="container h-screen flex flex-col text-center px-10 mx-auto items-center"
+      className="container h-screen flex flex-col text-center px-10 mx-auto items-center md:pt-12 2xl:pt-3"
     >
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl">
