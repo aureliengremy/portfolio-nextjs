@@ -39,6 +39,10 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <title>Aurelien Gremy</title>
         <meta name="description" content="Portfolio - Aurelien Gremy" />
         <meta
+          property="og:title"
+          content="Aurelien Gremy"
+        />
+        <meta
           property="og:description"
           content="Portfolio of Aurelien Gremy - Front-end Dev"
         />
