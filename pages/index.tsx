@@ -50,23 +50,23 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
           <Hero pageInfo={pageInfo} />
         </section>
         {/* About */}
-        <section id="about" className="snap-center">
+        <section id="about" className="snap-center md:mt-12 2xl:mt-3">
           <About pageInfo={pageInfo} />
         </section>
         {/* Experience */}
-        <section id="experience" className="snap-center">
+        <section id="experience" className="snap-center md:mt-12 2xl:mt-3">
           <WorkExperience experiences={experiences} />
         </section>
         {/* Skills */}
-        <section id="skills" className="snap-center">
+        <section id="skills" className="snap-center md:mt-12 2xl:mt-3">
           <Abilities skills={skills} />
         </section>
         {/* Projects */}
-        <section id="projects" className="snap-center">
+        <section id="projects" className="snap-center md:mt-12 2xl:mt-3">
           <Projects projects={projects} />
         </section>
         {/* Contact Me */}
-        <section id="contact" className="snap-center">
+        <section id="contact" className="snap-center md:mt-12 2xl:mt-3">
           <ContactMe pageInfo={pageInfo} />
         </section>
         <Link href="#hero">

@@ -14,7 +14,7 @@ const WorkExperience = ({ experiences }: Props) => {
       initial={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1 }}
-      className="h-screen flex flex-col relative overflow-hidden text-left max-w-full px-10 mx-auto items-center"
+      className="h-full 2xl:h-screen flex flex-col relative overflow-hidden text-left max-w-full px-10 mx-auto items-center"
     >
       <div className="mb-6 mt-24">
         <h3 className="uppercase tracking-[10px] text-gray-500 text-2xl">

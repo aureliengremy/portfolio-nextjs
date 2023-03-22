@@ -33,7 +33,7 @@ const About = ({ pageInfo }: Props) => {
             opacity: 1,
           }}
           src="/images/Me_smilng-black.png"
-          className="mb-5 mx-auto md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 xl:w-[500px] xl:h-[600px]"
+          className="mb-5 mx-auto md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-64 lg:w-80 lg:h-80  2xl:w-[500px] 2xl:h-[600px]"
         />
         <motion.div
           initial={{
