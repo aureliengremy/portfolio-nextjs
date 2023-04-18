@@ -2,6 +2,7 @@
   
 This project is a modern portfolio website built with NEXT.JS, Framer Motion, Tailwind CSS, Sanity.io.
 
+### Live: [aureliengremy.com](https://www.aureliengremy.com/)
 
 ## 🛠️ Tech Stack
 - [NextJS](https://nextjs.org/)
